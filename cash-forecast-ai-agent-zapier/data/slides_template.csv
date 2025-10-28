@@ -1,0 +1,6 @@
+section,content
+title,{{PRESENTATION_TITLE}}
+summary,"Week of {{week_of}} | Opening £{{opening_cash}} | Closing £{{closing_cash}} | Net change £{{net_change}}"
+drivers,"Inflows: £{{inflows_total}} (AR: £{{ar_total}}) | Outflows: £{{outflows_total}} (Payroll £{{payroll}}, Taxes £{{tax}}, Opex £{{opex}}, Capex £{{capex}})"
+risks,"1) AR slippage risk of £{{ar_risk}} next 7 days. 2) Tax payment due on {{tax_due}}. 3) Capex optionality of £{{capex_opt}}."
+recommendations,"1) Pull forward AR from top 3 customers. 2) Defer non-critical capex. 3) Keep min cash buffer of £{{min_buffer}}."

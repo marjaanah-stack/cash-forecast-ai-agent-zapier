@@ -1,0 +1,9 @@
+key,value
+BASE_CURRENCY,GBP
+TIMEZONE,Europe/London
+FORECAST_HORIZON_DAYS,14
+SLACK_CHANNEL,#finance-updates
+DRY_RUN,TRUE
+MAX_MESSAGES_PER_RUN,10
+PRESENTATION_TITLE,Cash Forecast — Weekly Update
+REPLY_TO,treasury@yourco.example

@@ -1,0 +1,15 @@
+date,description,category,amount_gbp
+2025-09-01,Opening cash,Balance,45000
+2025-09-02,Customer A payment,AR,12000
+2025-09-03,Customer B payment,AR,8500
+2025-09-04,Payroll,Payroll,-18000
+2025-09-05,Rent,Operating,-4000
+2025-09-06,SaaS subscriptions,Operating,-1200
+2025-09-09,Customer C payment,AR,10000
+2025-09-12,Marketing spend,Operating,-3000
+2025-09-15,Customer D payment,AR,9500
+2025-09-18,Tax provision,Tax,-6000
+2025-09-21,Capex purchase,Capex,-8000
+2025-09-23,Refunds,Other,-1200
+2025-09-25,Customer E payment,AR,7000
+2025-09-28,Misc receipts,Other,900
