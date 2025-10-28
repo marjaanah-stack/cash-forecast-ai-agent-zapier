@@ -110,15 +110,6 @@ Slack post summarising the forecast and confirming completion
 
 ---
 
-## 🧮 Combine Sheet Tabs for Screenshot
-
-To merge your 3 tab screenshots into one:
-
-```bash
-cd ~/Downloads/cash-forecast-ai-agent-zapier/docs/screenshots
-magick tab1-transactions.png tab2-controls.png tab3-forecast-output.png -append 01-sheets-transactions.png
-Use +append instead for side-by-side layout.
-
 🧠 Example Output
 Slack Summary:
 
