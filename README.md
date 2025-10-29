@@ -14,8 +14,6 @@ The **Cash Forecast AI Agent** automates short-term cash forecasting by integrat
 
 🧮 Google Sheets → 🤖 ChatGPT → 🎞️ Google Slides → 💾 Google Drive → 🧱 Notion → 💬 Slack
 
-yaml
-Copy code
 
 The agent reads transaction data, generates a 14-day forecast, creates a PowerPoint deck, logs results in Notion, and posts a summary in Slack — all automatically.
 
