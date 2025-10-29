@@ -1,8 +1,8 @@
-# 💷 Cash Forecast AI Agent (Zapier) — Full Stack
+# 💷 Cash Forecast AI Agent (Zapier)
 
 > _An AI-powered CFO assistant automating short-term cash forecasting, visualisation, and reporting._  
 > Built with **Zapier AI Agents**, **ChatGPT**, **Google Workspace**, **Slack**, and **Notion**.  
-> Author: **Marjaana Peeters**
+> **Author:** [Marjaana Peeters](https://github.com/)  
 
 ![Demo GIF](docs/demo.gif)
 
@@ -10,40 +10,38 @@
 
 ## 🧭 Overview
 
-The **Cash Forecast AI Agent** automates a typical finance process:  
-it reads transactional data from Google Sheets, generates a 14-day forecast and executive summary, creates a PowerPoint-ready report, posts updates to Slack, and logs results in Notion — all in one automated flow.
+The **Cash Forecast AI Agent** automates short-term cash forecasting by integrating Google Sheets, ChatGPT reasoning, and Google Workspace outputs — producing an executive-ready forecast and slides deck in minutes.
 
 🧮 Google Sheets → 🤖 ChatGPT → 🎞️ Google Slides → 💾 Google Drive → 🧱 Notion → 💬 Slack
 
 yaml
 Copy code
 
-**Purpose:**  
-To showcase how a finance professional can combine _AI reasoning_ and _automation tools_ to produce CFO-level insights and outputs with minimal manual effort.
+The agent reads transaction data, generates a 14-day forecast, creates a PowerPoint deck, logs results in Notion, and posts a summary in Slack — all automatically.
 
 ---
 
 ## ⚙️ Core Capabilities
 
-| Function | Description |
-|-----------|-------------|
-| 📊 **Data Ingestion** | Reads cash transactions and controls from Google Sheets |
-| 🧠 **Forecasting & Narration** | ChatGPT generates a 14-day cash forecast and commentary |
-| 🪄 **Visualisation** | Builds a Google Slides presentation deck |
-| 💾 **Export & Logging** | Exports the deck to PowerPoint (`.pptx`) and logs results in Notion |
-| 💬 **Communication** | Posts summary to Slack (DRY_RUN mode for testing) |
-| 🔒 **Safety** | DRY_RUN=TRUE by default — no real messages or sends |
+| Feature | Description |
+|----------|-------------|
+| 📊 **Data Ingestion** | Reads transactions and control data from Google Sheets |
+| 🧠 **Forecasting & Narration** | ChatGPT produces cash forecast + summary insights |
+| 🎞️ **Visualisation** | Generates a Google Slides forecast deck |
+| 💾 **Export & Logging** | Exports PPTX to Drive and logs key data to Notion |
+| 💬 **Slack Summary** | Posts daily forecast highlights to Slack |
+| 🔒 **DRY_RUN Mode** | Safe testing — no real messages or files sent |
 
 ---
 
 ## 🧩 Architecture at a Glance
 
-1️⃣ Google Sheets (transactions, controls)
-2️⃣ ChatGPT → generates forecast narrative
-3️⃣ Google Slides → creates deck
-4️⃣ Google Drive → exports to PPTX
-5️⃣ Notion → logs the run
-6️⃣ Slack → posts summary
+1️⃣ Google Sheets (Transactions & Controls)
+2️⃣ ChatGPT (Forecast generation)
+3️⃣ Google Slides (Deck creation)
+4️⃣ Google Drive (Export)
+5️⃣ Notion (Run log)
+6️⃣ Slack (Forecast summary)
 
 yaml
 Copy code
@@ -53,27 +51,27 @@ Copy code
 ## 📸 Key Screenshots
 
 ### 1️⃣ Google Sheets — Data Tabs  
-Transactions, controls, and forecast_output tabs combined  
+Transactions, controls, and forecast output combined.  
 ![Sheets](docs/screenshots/01-sheets-transactions.png?raw=true)
 
 ### 2️⃣ Zapier Agent — Tools Configuration  
-Tools connected: Sheets · ChatGPT · Slides · Drive · Notion · Slack  
+Connected tools: Sheets · ChatGPT · Slides · Drive · Notion · Slack.  
 ![Tools](docs/screenshots/02-agent-tools.png?raw=true)
 
 ### 3️⃣ Zapier Agent — Instructions Panel  
-The “Instructions to follow” panel showing the Cash Forecast logic  
+The “Instructions to follow” box showing the Cash Forecast logic.  
 ![Instructions](docs/screenshots/04-instructions-panel.png?raw=true)
 
 ### 4️⃣ Zapier Agent — Run Activity  
-Execution flow: rows read → forecast generated → Slides created → Drive exported → Notion logged → Slack posted  
+Execution flow: rows read → forecast generated → Slides created → Slack posted.  
 ![Run](docs/screenshots/05-test-run.png?raw=true)
 
 ### 5️⃣ Google Slides — Generated Deck  
-Forecast presentation automatically populated from the Agent  
+Automated forecast presentation created via the Slides API.  
 ![Slides](docs/screenshots/08-slides-presentation.png?raw=true)
 
 ### 6️⃣ Slack — Summary Message  
-Slack post summarising the forecast and confirming completion  
+Slack summary confirming forecast results and log completion.  
 ![Slack](docs/screenshots/10-slack-summary.png?raw=true)
 
 ---
@@ -81,7 +79,7 @@ Slack post summarising the forecast and confirming completion
 ## 🖼️ Full Screenshot Gallery
 
 <details>
-<summary>Click to view all steps</summary>
+<summary>Click to view all screenshots</summary>
 
 | Step | Screenshot |
 |------|-------------|
@@ -97,42 +95,53 @@ Slack post summarising the forecast and confirming completion
 ## 🧾 Setup Summary
 
 1. Import CSVs from `/data` into a new Google Sheet (`transactions`, `controls`, `forecast_output`).  
-2. In Zapier → create a new **AI Agent** named _Cash Forecast Agent_.  
+2. In Zapier → create a new **AI Agent** named **Cash Forecast Agent**.  
 3. Connect: Google Sheets · ChatGPT (OpenAI API key) · Slack · Google Slides · Google Drive · Notion.  
 4. Paste contents of [`docs/AGENT_INSTRUCTIONS.md`](docs/AGENT_INSTRUCTIONS.md) into the “Instructions to follow” box.  
-5. Trigger: **On demand** (manual run).  
-6. Run once to test. Confirm:
-   - Slides deck created  
-   - PPTX exported to Drive  
-   - Notion log added  
-   - Slack message posted  
-   - Sheet updated  
+5. Trigger manually (**On Demand**) for first test.  
+6. Confirm:
+   - ✅ Slides deck created  
+   - ✅ PPTX exported to Drive  
+   - ✅ Notion log added  
+   - ✅ Slack message posted  
+   - ✅ Sheet updated  
 
 ---
 
-🧠 Example Output
-Slack Summary:
+## 💬 Example Outputs
 
-“Cash Forecast Agent run — 2025-09-24
-Forecast generated for 14 days ahead.
-Opening £45,000 → Closing £49,800 (+£4.8k).
-PPTX + Notion log created. DRY_RUN=TRUE.”
+**Slack Summary:**
+> “Cash Forecast Agent run — 2025-09-24  
+> Forecast generated for 14 days ahead.  
+> Opening £45,000 → Closing £49,800 (+£4.8k).  
+> PPTX + Notion log created. DRY_RUN=TRUE.”
 
-Google Slides:
+**Google Slides Deck:**
+> Four slides: _Summary · Drivers · Risks · Recommendations_ — all auto-generated by ChatGPT.
 
-Four slides — Summary, Drivers, Risks, Recommendations.
-Automatically populated via ChatGPT and Google Slides API.
+---
 
-🧰 Tech Stack
-Layer	Tools
-Data	Google Sheets
-AI	ChatGPT (OpenAI API)
-Workflow	Zapier AI Agents
-Output	Google Slides + Drive
-Collaboration	Slack
-Logging	Notion
+## 🧰 Tech Stack
 
-👩‍💼 Author
-Marjaana Peeters
-Finance Leader & AI-Native CFO in training
-LinkedIn · GitHub
+| Layer | Tools |
+|--------|-------|
+| Data | Google Sheets |
+| AI | ChatGPT (OpenAI API) |
+| Workflow | Zapier AI Agents |
+| Output | Google Slides + Drive |
+| Collaboration | Slack |
+| Logging | Notion |
+
+---
+
+## 👩‍💼 Author
+
+**Marjaana Peeters**  
+AI-savvy Finance Leader  
+🌐 LinkedIn: www.linkedin.com/in/marjaana-peeters-0442a4  
+
+---
+
+## 🪶 License
+
+MIT © 2025 Marjaana Peeters
